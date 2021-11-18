@@ -53,11 +53,13 @@
 				</li>
 
 					<li class="nav-item active">
-					<form action="/${user.username }/${user.getPassword()}/cart">
+					
+					<form action="/cart">
 					     <input type ="hidden" name="username" value=${user.username }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
-                          <button type="submit" class="btn btn-primary btn-lg"> Cart</button> 
+                          <button  type="submit" class="btn btn-primary btn-lg"> Cart</button> 
+                          
                         
 					</form>
 				</li>
@@ -116,7 +118,9 @@
                         <form class="margin-t" action="/addToCart"  id="addToCartForm">   
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${product.id }></input> 
-                        <button type="submit" class="btn btn-primary btn-lg"  > Add To Cart</button>
+                        <input type="hidden" name="password" value=${user.getPassword() }></input> 
+                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  > Add To Cart</button>
+                       
                         
                         </form>
                         
@@ -138,7 +142,6 @@
 </form>
 <script>
 </script>
-
 
 
   
