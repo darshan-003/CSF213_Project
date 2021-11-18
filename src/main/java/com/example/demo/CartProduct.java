@@ -23,6 +23,7 @@ public class CartProduct{
 	public String description ;
 	public int price ;
 	String username;
+
 	
 
 	public String getUsername() {

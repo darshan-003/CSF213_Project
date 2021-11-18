@@ -12,7 +12,7 @@ public class Products {
 	public String name ;
 	
 	public String id ;
-	
+	public int quantity;
 	public String imageUrl ;
 	public String description ;
 	public int price ;
@@ -74,6 +74,12 @@ public class Products {
 	public String toString() {
 		return "Products [name=" + name + ", id=" + id + ", imageUrl=" + imageUrl + ", description=" + description
 				+ ", price=" + price + "]";
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 	
 	

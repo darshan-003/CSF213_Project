@@ -56,6 +56,9 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Description" name="description" required="">
                             </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Quantity" name="quantity" required="">
+                            </div>
                             
                            
                             <button type="submit" class="form-button button-l margin-b">Add Product</button>
