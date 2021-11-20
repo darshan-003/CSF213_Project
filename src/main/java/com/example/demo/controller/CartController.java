@@ -231,7 +231,21 @@ public class CartController
 			  List<CartProduct> removeProd= cart_repo.findByUsernameAndId(username,id);
 			  CartProduct removeprod=removeProd.get(0);
 			  cart_repo.delete(removeprod);
-		 
+			  
+			  
+			  List<Products> Prod= product_repo.findById(id);
+			  if(Prod.isEmpty()) {
+				  Products p = new Products(removeprod.name, removeprod.id, removeprod.imageUrl, removeprod.description, removeprod.price,removeprod.getQuantity());
+					
+				  product_repo.save(p);
+			  }
+			  else {				  
+				  Products product= Prod.get(0);
+				  int t=product.getQuantity();
+				  product.setQuantity(t+removeprod.getQuantity());
+				  product_repo.save(product);
+			  }
+			  
 			  Price calcPrice= new Price();
 		 int TotalPrice=0;
 		 List<CartProduct> cp = cart_repo.findByUsername(username);

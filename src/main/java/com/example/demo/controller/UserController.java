@@ -26,6 +26,13 @@ public class UserController {
 	@Autowired
 	ProductsRepo product_repo;
 	
+	@RequestMapping("/")
+	public String homeLogin()
+	{
+		return "userSignin.jsp";
+		
+	}
+
 	@RequestMapping("/signin")
 	public String signinOption()
 	{

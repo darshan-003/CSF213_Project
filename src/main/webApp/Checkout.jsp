@@ -31,7 +31,7 @@
 
 					<li class="nav-item active">
 					
-					<a href="" class="nav-link" > Home </a>
+					<a href="getUser?username=${user.username }&password=${user.getPassword() }" class="nav-link" > Home </a>
 				</li>
 				<li class="nav-item active">
 					<a href="/addProduct" class="nav-link" > Add Products </a>

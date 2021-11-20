@@ -18,9 +18,19 @@ public class Products {
 	public int price ;
 
 	
+	public Products() {
+		super();
+	}
 	
-	
-	
+	public Products(String name, String id, String imageUrl, String description, int price, int quantity) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.imageUrl = imageUrl;
+		this.description = description;
+		this.price = price;
+		this.quantity = quantity;
+	}
 	
 	 
 	
@@ -83,6 +93,9 @@ public class Products {
 	}
 	
 	
+	public void addQuantity(int quantity) {
+		this.quantity += quantity;
+	}
 	
 	
 
