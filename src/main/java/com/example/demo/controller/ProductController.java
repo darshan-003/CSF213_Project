@@ -72,7 +72,7 @@ public class ProductController {
 		
 		ModelAndView mv = new ModelAndView() ;
 		
-		List<Products> productList = repo.findById(id) ;
+		List<Products> productList = repo.findById(id) ; 
 		
 		Products product = productList.get(0) ;
 		
