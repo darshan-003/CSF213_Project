@@ -143,5 +143,10 @@
 
 </body>
 
+<script>
+	function alertFunction() {
+	  alert("Added to Cart");
+	}
+</script>
 
 </html>

@@ -255,7 +255,7 @@ public class CartController
 			TotalPrice=TotalPrice + prod.price * qnt;
 		 }
 		 calcPrice.setTotalPrice(TotalPrice);
-		 mv.addObject("User",user);
+		 mv.addObject("user",user);
 		 mv.addObject("TotalPrice",calcPrice);
 		 mv.addObject("cp",cp);
 		 mv.setViewName("Checkout.jsp");
@@ -264,7 +264,51 @@ public class CartController
 	}
 	
 	
-	
+	@RequestMapping("/cartprodremove")	
+	public ModelAndView cartprodremove(@RequestParam String username , @RequestParam String password, @RequestParam String id) {
+		
+		 ModelAndView mv= new ModelAndView();
+	     	 List<User>UserList;
+			 UserList=  repo.findByUsername(username);
+		
+			
+			  if(UserList.isEmpty())
+			  { mv.setViewName("user_incorrect.jsp"); return mv; }
+			  
+			  User user= UserList.get(0);
+		
+			  List<CartProduct> removeProd= cart_repo.findByUsernameAndId(username,id);
+			  CartProduct removeprod=removeProd.get(0);
+			  cart_repo.delete(removeprod);
+			  
+			  
+			  List<Products> Prod= product_repo.findById(id);
+			  if(Prod.isEmpty()) {
+				  Products p = new Products(removeprod.name, removeprod.id, removeprod.imageUrl, removeprod.description, removeprod.price,removeprod.getQuantity());
+					
+				  product_repo.save(p);
+			  }
+			  else {				  
+				  Products product= Prod.get(0);
+				  int t=product.getQuantity();
+				  product.setQuantity(t+removeprod.getQuantity());
+				  product_repo.save(product);
+			  }
+			  Price calcPrice= new Price();
+				 int TotalPrice=0;
+				 List<CartProduct> cp = cart_repo.findByUsername(username);
+				 
+				 for(CartProduct prod : cp) {
+					 int qnt=prod.getQuantity(); 
+					TotalPrice=TotalPrice + prod.price * qnt;
+				 }
+				 calcPrice.setTotalPrice(TotalPrice);
+				 mv.addObject("user",user);
+				 mv.addObject("TotalPrice",calcPrice);
+				 mv.addObject("cp",cp);
+				 mv.setViewName("CartPage.jsp");
+		return mv;
+	}
 	
 	
 	

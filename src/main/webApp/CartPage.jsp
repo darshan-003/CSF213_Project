@@ -129,7 +129,17 @@
                        
                         
                         </form>
+                        <div>
+						<form action="/cartprodremove">
+					     <input type ="hidden" name="username" value=${cp.username }></input>
+					     <input type ="hidden" name="id" value=${cp.id }></input>
+                        <input type ="hidden" name="password" value=${user.getPassword() }></input>
+              
+                          <button type="submit" class="btn-remove">Remove</button>
+                          
                         
+					</form>
+				</div>
 
 				</div>
 			</div>
