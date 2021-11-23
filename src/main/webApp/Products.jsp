@@ -15,6 +15,8 @@
 	<title>Products</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dist/notifications.css">
+	<script src="/dist/notifications.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -50,6 +52,7 @@
 				</li>
 				<li class="nav-item active">
 					<a href="/addProduct" class="nav-link" > Add Products </a>
+					
 				</li>
 
 					<li class="nav-item active">
@@ -119,7 +122,7 @@
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${product.id }></input> 
                         <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  > Add To Cart</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  onclick="return alertFunction();"   > Add To Cart</button>
                        
                         
                         </form>
@@ -141,6 +144,9 @@
 
 </form>
 <script>
+	function alertFunction() {
+	  alert("Added to Cart");
+	}
 </script>
 
 

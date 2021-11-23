@@ -127,11 +127,14 @@
 			<h3>Total:</h3>
 			<h3>Rs ${TotalPrice.getTotalPrice() }</h3>
 		</div>
-		
-		<button href="/thankyou">
-			
-			<span>Confirm Order</span>
-		</button>
+
+		<div>
+			<form action="/placeOrder">
+				<input type ="hidden" name="username" value=${user.username }></input>	    
+                <input type ="hidden" name="password" value=${user.getPassword() }></input>
+              	<button type="submit" class="btn-remove">Confirm</button>
+            </form>
+		</div>
 	</div>
 	<div class="help">
 		<p>Need help? Call free 01234 567 890</p>
@@ -143,5 +146,10 @@
 
 </body>
 
+<script>
+	function alertFunction() {
+	  alert("Added to Cart");
+	}
+</script>
 
 </html>

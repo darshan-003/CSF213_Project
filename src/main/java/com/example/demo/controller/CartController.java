@@ -14,9 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.CartProduct;
+import com.example.demo.OrderHistory;
 import com.example.demo.Products;
 import com.example.demo.User;
 import com.example.demo.dao.CartRepo;
+import com.example.demo.dao.OrderHistoryRepo;
 import com.example.demo.dao.ProductsRepo;
 import com.example.demo.dao.UserRepo;
 import com.example.demo.service.Price;
@@ -34,6 +36,8 @@ public class CartController
 	@Autowired
 	UserRepo repo;
 	
+	@Autowired
+	OrderHistoryRepo order_repo;
 	
 	@RequestMapping("/addToCart")
 	public ModelAndView addTocart(String username, String id, String password)
@@ -45,6 +49,32 @@ public class CartController
 		CartProduct cp = new CartProduct(product.name, product.id, product.imageUrl, product.description, product.price,username,1);
 		
 		cart_repo.save(cp);
+		
+		int qnt=1; 
+		  //if quantity more than stock prints error in console. need popup here
+		   if(qnt<=product.quantity) {
+			   
+		   
+		   
+		   //update quantity of product in cart database , by selecting row based on username and product id.
+		     List<CartProduct> updateProd= cart_repo.findByUsernameAndId(username, id);
+			
+			  CartProduct prod= updateProd.get(0); 
+			  prod.setQuantity(qnt);
+			  cart_repo.save(prod);
+			// decrease quantity in product database.
+			//If quantity selected by user equal to stock, delete product from database.
+			  int t=product.getQuantity();
+			  product.setQuantity(t-qnt);
+			  product_repo.save(product);
+			  if(product.getQuantity()==0) {
+				  product_repo.delete(product);
+			  }
+		   }
+		   else {
+			   System.out.println("quantity exceeded");
+			   //popup here
+		   }
 		//showing the products page again 
 		//addToCart Button also sends username and password.
         ModelAndView mv = new ModelAndView();
@@ -133,7 +163,7 @@ public class CartController
 		  
 		  int qnt=Integer.parseInt(quantity); 
 		  //if quantity more than stock prints error in console. need popup here
-		   if(qnt<=product.quantity) {
+		   if(qnt-1<=product.quantity) {
 			   
 		   
 		   
@@ -146,7 +176,7 @@ public class CartController
 			// decrease quantity in product database.
 			//If quantity selected by user equal to stock, delete product from database.
 			  int t=product.getQuantity();
-			  product.setQuantity(t-qnt);
+			  product.setQuantity(t-qnt+1);
 			  product_repo.save(product);
 			  if(product.getQuantity()==0) {
 				  product_repo.delete(product);
@@ -208,7 +238,7 @@ public class CartController
 			TotalPrice=TotalPrice + prod.price * qnt;
 		 }
 		 calcPrice.setTotalPrice(TotalPrice);
-		 mv.addObject("User",user);
+		 mv.addObject("user",user);
 		 mv.addObject("TotalPrice",calcPrice);
 		 mv.addObject("cp",cp);
 		 mv.setViewName("Checkout.jsp");
@@ -255,7 +285,7 @@ public class CartController
 			TotalPrice=TotalPrice + prod.price * qnt;
 		 }
 		 calcPrice.setTotalPrice(TotalPrice);
-		 mv.addObject("User",user);
+		 mv.addObject("user",user);
 		 mv.addObject("TotalPrice",calcPrice);
 		 mv.addObject("cp",cp);
 		 mv.setViewName("Checkout.jsp");
@@ -264,9 +294,110 @@ public class CartController
 	}
 	
 	
+	@RequestMapping("/cartprodremove")	
+	public ModelAndView cartprodremove(@RequestParam String username , @RequestParam String password, @RequestParam String id) {
+		
+		 ModelAndView mv= new ModelAndView();
+	     	 List<User>UserList;
+			 UserList=  repo.findByUsername(username);
+		
+			
+			  if(UserList.isEmpty())
+			  { mv.setViewName("user_incorrect.jsp"); return mv; }
+			  
+			  User user= UserList.get(0);
+		
+			  List<CartProduct> removeProd= cart_repo.findByUsernameAndId(username,id);
+			  CartProduct removeprod=removeProd.get(0);
+			  cart_repo.delete(removeprod);
+			  
+			  
+			  List<Products> Prod= product_repo.findById(id);
+			  if(Prod.isEmpty()) {
+				  Products p = new Products(removeprod.name, removeprod.id, removeprod.imageUrl, removeprod.description, removeprod.price,removeprod.getQuantity());
+					
+				  product_repo.save(p);
+			  }
+			  else {				  
+				  Products product= Prod.get(0);
+				  int t=product.getQuantity();
+				  product.setQuantity(t+removeprod.getQuantity());
+				  product_repo.save(product);
+			  }
+			  Price calcPrice= new Price();
+				 int TotalPrice=0;
+				 List<CartProduct> cp = cart_repo.findByUsername(username);
+				 
+				 for(CartProduct prod : cp) {
+					 int qnt=prod.getQuantity(); 
+					TotalPrice=TotalPrice + prod.price * qnt;
+				 }
+				 calcPrice.setTotalPrice(TotalPrice);
+				 mv.addObject("user",user);
+				 mv.addObject("TotalPrice",calcPrice);
+				 mv.addObject("cp",cp);
+				 mv.setViewName("CartPage.jsp");
+		return mv;
 	
+	}
 	
+	@RequestMapping("/placeOrder")
+	public ModelAndView placeOrder(@RequestParam String username,@RequestParam String password)
+	{
+		List<CartProduct> ProductList= cart_repo.findByUsername(username);
+//		CartProduct product = ProductList.get(0);
+		
+		for(CartProduct product:ProductList ) {
+		
+			List<OrderHistory> Prod= order_repo.findByUsernameAndId(username,product.id);
+			  if(Prod.isEmpty()) {
+				  OrderHistory cp = new OrderHistory(product.name, product.id, product.imageUrl, product.description, product.price,username,product.getQuantity());
+				  order_repo.save(cp);
+					
+				  cart_repo.delete(product);
+			  }
+			  else {				  
+				  OrderHistory product1= Prod.get(0);
+				  int t=product1.getQuantity();
+				  product1.setQuantity(t+product.getQuantity());
+				  order_repo.save(product1);
+				  cart_repo.delete(product);
+			  }
+		
+		}
+		//showing the products page again 
+		//addToCart Button also sends username and password.
+        ModelAndView mv = new ModelAndView();
+		
+		List<User>UserList;
+		UserList=  repo.findByUsername(username);
+		
+		if(UserList.isEmpty())
+		{
+			mv.setViewName("user_incorrect.jsp");
+			return mv;	
+		}
+		
+		User user= UserList.get(0);
+		
+		List<Products> productList = product_repo.findAll();
 	
+		if(user.passwordmatch(password))
+		{
+			mv.addObject("user", user);
+			mv.addObject("product", productList);
+			mv.setViewName("Products.jsp");
+			return mv;
+		}
+		else
+		{
+			mv.setViewName("user_incorrect.jsp");
+			return mv;
+		}
+//		popup
+		
+		
+	}
 	
 	
 	
