@@ -46,11 +46,16 @@
 
 					<li class="nav-item active">
 					
-					<a href="getUser?username=${user.username }&password=${user.getPassword() }" class="nav-link" > Home </a>
+						<form action="/getUser">
+							<input type ="hidden" name="username" value=${user.username }></input>
+						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
+				 
+							 <button  type="submit" class="btn btn-primary btn-lg"> Home</button> 
+							 
+						   
+					   </form>
 				</li>
-				<li class="nav-item active">
-					<a href="/addProduct" class="nav-link" > Add Products </a>
-				</li>
+				
 
 					<li class="nav-item active">
 					<form action="/cart">
@@ -129,17 +134,7 @@
                        
                         
                         </form>
-                        <div>
-						<form action="/cartprodremove">
-					     <input type ="hidden" name="username" value=${cp.username }></input>
-					     <input type ="hidden" name="id" value=${cp.id }></input>
-                        <input type ="hidden" name="password" value=${user.getPassword() }></input>
-              
-                          <button type="submit" class="btn-remove">Remove</button>
-                          
                         
-					</form>
-				</div>
 
 				</div>
 			</div>

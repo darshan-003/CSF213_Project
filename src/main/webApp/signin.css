@@ -35,6 +35,10 @@ body {
 .line-b {
     border-bottom: 1px solid #FFEB3B !important;
 }
+#logoimg{
+
+       height:65px;
+  }
 
 /* Buttons */
 .button {
@@ -127,6 +131,10 @@ body {
 .margin-b-lg {
     margin-bottom: 30px;
 }
+#logoimg{
+
+       height:65px;
+  }
 
 /* Bootstrap Form Control Extension */
 
