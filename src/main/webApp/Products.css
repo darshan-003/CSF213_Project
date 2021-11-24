@@ -6,20 +6,16 @@ html, body {
 
 height: 100% ;
 width: 100% ;
-background-color: #F5F5F5 ;
+background-color: #424242 ;
 color: #222;
 }
 
 
-.centerallign{
-	
-	
-	
-}
+
 
 
 .navbar{
-  background-color: #585858 ;
+  background-color: #f5f5f5 ;
   height: 75px;
 
 }
@@ -32,13 +28,14 @@ color: #222;
 .nav-item {
 
   font-size: 1.4em ;
-  color: #000000;
+   color: #000000;
   padding-right: 20px ;
 }
 .nav-link:hover {
 
 
-background-color: #696969   ;
+font-weight: bold;
+background-color: #c0c0c0   ;
 
 }
 
@@ -108,39 +105,6 @@ margin-top: 60px ;
   text-align: center;
 
  }
-.social a {
-
-  font-size: 4rem ;
-  padding: 5rem;
-  margin-top: 130px;
-}
-
-.fa-facebook{
-color: #3b5998;
-
-}
-
-.fa-linkedin{
-
-  color: #2867B2 ;
-}
-
-.fa-google-plus-g{
-
- color: #dd4b39 ; 
-}
-
-.fa-youtube{
-
-  color: #bb0000 ;
-}
-.fa-facebook:hover,
-.fa-linkedin:hover,
-.fa-google-plus-g:hover,
-.fa-youtube:hover
-{
-  color: #d5d5d5;
-}
 
 
 footer{
@@ -204,13 +168,6 @@ footer{
 
 
 
-  .nav-item {
-
-  font-size: 1.5em ;
-  color: #336699 ;
-  padding-right: 20px ;
-  font-weight: normal; ;
-}
 
   #logoimg{
 
@@ -271,7 +228,7 @@ margin-top: 40px ;
 }
 
 footer{
-  margin-top:  ;
+  
   background-color: #585858; 
 }
   
@@ -320,13 +277,6 @@ footer{
 @media (max-width: 767px) {
 
 
-  .nav-item {
-
-  font-size: 1.5em ;
-  color: #336699 ;
-  padding-right: 20px ;
-  font-weight: normal; ;
-}
 
   #logoimg{
 
@@ -398,7 +348,7 @@ margin-top: 40px ;
 }
 
 footer{
-  margin-top:  ;
+  
   background-color: #585858; 
 }
   
@@ -450,13 +400,7 @@ footer{
 
 @media (max-width: 575px) {
 
-.nav-item {
 
-  font-size: 1.5em ;
-  color: #336699 ;
-  padding-right: 20px ;
-  font-weight: normal; ;
-}
 
   #logoimg{
 
@@ -528,7 +472,7 @@ margin-top: 40px ;
 }
 
 footer{
-  margin-top:  ;
+ 
   background-color: #585858; 
 }
   
@@ -605,13 +549,6 @@ footer{
   }
 
 
-.nav-item {
-
-  font-size: 1.5em ;
-  color: #336699 ;
-  padding-right: 20px ;
-  font-weight: normal; ;
-}
 
 .carousel-caption p {
 
@@ -773,10 +710,4 @@ Large (lg) devices (desktops, 992px and up)
 @media (min-width: 992px) { ... }
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
-*/
-
-
-
-
-
-
+*/}

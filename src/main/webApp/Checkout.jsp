@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>CheckOut</title>
 <link href="Checkout.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <body>
   
 <nav class="navbar navbar-expand-md navbar-light sticky-top  " >
-
+<img id="logoimg" src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
 		<div class="container-fluid">
 			
 
@@ -31,11 +31,16 @@
 
 					<li class="nav-item active">
 					
-					<a href="getUser?username=${user.username }&password=${user.getPassword() }" class="nav-link" > Home </a>
+						<form action="/getUser">
+							<input type ="hidden" name="username" value=${user.username }></input>
+						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
+				 
+							 <button  type="submit" class="btn btn-primary btn-lg"> Home</button> 
+							 
+						   
+					   </form>
 				</li>
-				<li class="nav-item active">
-					<a href="/addProduct" class="nav-link" > Add Products </a>
-				</li>
+				
 
 					<li class="nav-item active">
 					
@@ -49,9 +54,12 @@
 					</form>
 				</li>
 
+				</li>
+
 					<li class="nav-item active">
 					<a href="" class="nav-link" > Orders Placed </a>
 				   </li>
+				   
 
 				   <li class="nav-item active">
 					<a href="/Faq" class="nav-link" > FAQ </a>
@@ -65,10 +73,14 @@
 				   
 				   
 				   
-				   <form action="/getDetails" method="GET">
+					   <form action="/getDetails" method="GET">
   <button type="submit" class="btn btn-primary btn-lg" name="username" id="username" value=${user.username }> Details</button> 
   </form>
 				
+			</div>
+		</div>
+	</nav>
+	
 			</div>
 		</div>
 	</nav>
@@ -77,7 +89,7 @@
 	
 	
 	<div class="bag">
-		<p class="bag-head"><span style="text-transform: uppercase">Your Cart</span></p>
+		<p class="bag-head"><span style="color:white">Your Cart</span></p>
 	</div>
 	<c:forEach items="${cp}" var="cp">
 	<div class="bag-product">
@@ -86,29 +98,40 @@
 		</div>
 		<div class="description">
 			
-			<h1>${cp.name }</h1>
+			<h1><span style="color:white">${cp.name }</span></h1>
 			
 			<p class="description-text">${cp.description }.</p>
-			
-			<h2>Rs${cp.price }</h2>
+			<style>
+			div{
+			padding-left : 100px
+			}</style>
+			<h2><span style="color:white"><"Rs${cp.price }</span></h2>
 			<div class="quantity-wrapper">
 				<div>
-					<label for="quantity" style="margin-right: 0.5rem;">Quantity:</label>
+					<label for="quantity" style="padding: 100px"><span style="color:white">Quantity:</span></label>
+	<style>
+			div{
+			padding-left : 100px
+			}
 	
-	
-						<option value="1" selected>${cp.quantity }</option>
-						
+						<option value="1" selected><span style="color:white">${cp.quantity }</span></option>
+						</style>
 				</div>
 				
 				<div>
 				<form action="/removeproduct">
+				<style>
+			div{
+			padding-left : 100px
+			}
+	
 					     <input type ="hidden" name="username" value=${cp.username }></input>
 					     <input type ="hidden" name="id" value=${cp.id }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
-                          <button type="submit" class="btn-remove">Remove</button>
+                          <button type="submit" class="btn-remove"><span style="color:white">Remove</span></button>
                           
-                        
+                        </style>
 					</form>
 				</div>
 				
@@ -119,25 +142,25 @@
 	<div class="bag-total">
 		
 		<div class="delivery">
-			<p class="small">Delivery in 2 working days):<br>
+			<p class="small"><span style="color:white" style="font-size:50px" >Delivery in 2 working days):</span><br>
 			
 			
 		</div>
 		<div class="total">
-			<h3>Total:</h3>
-			<h3>Rs ${TotalPrice.getTotalPrice() }</h3>
+		
+			<h3><span style="color:white">Total:</span></h3>
+			<h3><span style="color:white">Rs ${TotalPrice.getTotalPrice() }</span></h3>
 		</div>
-
-		<div>
-			<form action="/placeOrder">
-				<input type ="hidden" name="username" value=${user.username }></input>	    
-                <input type ="hidden" name="password" value=${user.getPassword() }></input>
-              	<button type="submit" class="btn-remove">Confirm</button>
-            </form>
-		</div>
+		<div class = "thank">
+		
+		<a href="thankyou.html" class = "confirm">
+		 
+		<span style="color:white">Confirm Order</span></a>
+		</div>	
+		
 	</div>
 	<div class="help">
-		<p>Need help? Call free 01234 567 890</p>
+		<p><span style="color:white">Need help? Call free 01234 567 890</span></p>
 	</div>
 </div>
 </div>
@@ -146,10 +169,5 @@
 
 </body>
 
-<script>
-	function alertFunction() {
-	  alert("Added to Cart");
-	}
-</script>
 
 </html>

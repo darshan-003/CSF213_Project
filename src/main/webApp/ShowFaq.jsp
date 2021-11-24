@@ -30,11 +30,9 @@
 	                   </div>
 	                    </c:forEach>
 	                    
-	                    <form action="/addFaq">
+	                   
                     
-                    <div >
-						           <button type="submit" class="btn btn-outline-success">Add FAQ(admin)</button>
-						        </div>
+                    
 
                     </form>
 	                    </div>

@@ -1,35 +1,37 @@
 @charset "ISO-8859-1";
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Space+Mono:700');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
-$font-head: "Space Mono", sans-serif;
-$font-txt: "Lato", sans-serif;
-$small: 0.8rem;
-$blue: dodgerblue;
-$violet: lighten(rebeccapurple, 20%);
-$yellow: lemonchiffon;
 
-html,
-body { 
-	height: 100%; 
-	font-size: 16px; 
-	font-weight: 400; }
-	
 
-//body { padding: 0.5rem !important; }
 
-html,
-body,
-button,
-input[type="text"] { font-family: $font-txt;  }
+html, body {
+
+height: 100% ;
+width: 100% ;
+ background: #424242;
+    background: linear-gradient( #424242, #212121);
+}
+
+
+
+.thank .confirm{
+	background: green;
+  color: black;
+  text-decoration: none;
+  padding: .6em 1.3em .6em;
+  font-size: 1em;
+  border-radius: 2.5em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+}
 
 .navbar{
-  background-color: #585858 ;
+  background-color: whitesmoke;
   height: 75px;
 
 }
-
  #logoimg{
 
        height:65px;
@@ -38,20 +40,23 @@ input[type="text"] { font-family: $font-txt;  }
 .nav-item {
 
   font-size: 1.4em ;
-  color: #000000;
+   color: #000000;
   padding-right: 20px ;
 }
+.nav-link:hover {
+
+
+font-weight: bold;
+background-color: #c0c0c0   ;
+
+}
+
+
+
 @media (max-width: 991px) {
 
 
 
-  .nav-item {
-
-  font-size: 1.5em ;
-  color: #336699 ;
-  padding-right: 20px ;
-  font-weight: normal; ;
-}
 
   #logoimg{
 
@@ -74,34 +79,12 @@ input[type="text"] { font-family: $font-txt;  }
 .content { 
 	margin: 0 auto;
 	max-width: 600px; 
-	border: 1px solid $yellow; 
-	background: white; }
+	 }
 
-nav,
-.top-bar,
-.bag, 
-.bag-total,
-.help { padding: 0.5rem 1rem; }
 
-nav,
-a,
-.btn-go-checkout { color: white; }
 
-nav { 
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex; 
-	-webkit-box-orient: horizontal; 
-	-webkit-box-direction: normal; 
-	    -ms-flex-flow: row nowrap; 
-	        flex-flow: row nowrap;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	background: $blue;  }
+
+
 
 a {
 	padding: 0.2rem 0.5rem;
@@ -223,11 +206,3 @@ input[type="text"] {
 
 .help {	text-align: center; }
 
-html {
-	background: repeating-linear-gradient(
-		-45deg,
-		$yellow,
-		$yellow 10px,
-		darken($yellow, 10%) 10px,
-		darken($yellow, 10%) 20px,
-	); }

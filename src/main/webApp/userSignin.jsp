@@ -20,6 +20,8 @@
 <body>
     <body class="main-bg">
         <div class="login-container text-c animated flipInX">
+         <h1 class="text-whitesmoke">Welcome to Malakar Market!</h1>
+         <img id="logoimg" src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
                 <div>
                     <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
                 </div>
@@ -37,7 +39,8 @@
 
     <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
     <a class="text-darkyellow" href="/newUserRegistration"><small>Sign Up</small></a>
-
+    <br>
+    <a class="text-darkyellow" href="/admin_signin"><small>Admin Sign In</small></a>
 </form>
             <p class="margin-t text-whitesmoke"><small> OOP Group 7.1  &copy; 2021</small> </p>
 </div>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Sign - in as Admin</title>
 
         <link rel="stylesheet" href="signin.css">
         <!-- Latest compiled and minified CSS -->

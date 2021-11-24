@@ -15,8 +15,6 @@
 	<title>Products</title>
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/dist/notifications.css">
-	<script src="/dist/notifications.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -33,10 +31,9 @@
 
 <nav class="navbar navbar-expand-md navbar-light sticky-top  " >
 
-		<div class="container-fluid">
-			<a href="index.html" class="navbar-brand" >
+		
 				<img id="logoimg" src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
-			</a>
+			
 
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Item" >
 				<span class="navbar-toggler-icon" ></span>
@@ -47,13 +44,17 @@
 				<ul id="cni" class="navbar-nav ml-auto" >
 
 					<li class="nav-item active">
+						<form action="/getUser">
+							<input type ="hidden" name="username" value=${user.username }></input>
+						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
+				 
+							 <button  type="submit" class="btn btn-primary btn-lg"> Home</button> 
+							 
+						   
+					   </form>
 					
-					<a href="getUser?username=${user.username }&password=${user.getPassword() }" class="nav-link" > Home </a>
 				</li>
-				<li class="nav-item active">
-					<a href="/addProduct" class="nav-link" > Add Products </a>
-					
-				</li>
+				
 
 					<li class="nav-item active">
 					
@@ -70,6 +71,7 @@
 					<li class="nav-item active">
 					<a href="" class="nav-link" > Orders Placed </a>
 				   </li>
+				   
 
 				   <li class="nav-item active">
 					<a href="/Faq" class="nav-link" > FAQ </a>
@@ -122,7 +124,7 @@
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${product.id }></input> 
                         <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  onclick="return alertFunction();"   > Add To Cart</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  > Add To Cart</button>
                        
                         
                         </form>
@@ -144,9 +146,6 @@
 
 </form>
 <script>
-	function alertFunction() {
-	  alert("Added to Cart");
-	}
 </script>
 
 
