@@ -98,21 +98,16 @@
 		</div>
 		<div class="description">
 			
-			<h1><span style="color:white">${cp.name }</span></h1>
+			<h1><span style="color:yellow" style="padding: 100px">${cp.name }</span></h1>
 			
-			<p class="description-text">${cp.description }.</p>
-			<style>
-			div{
-			padding-left : 100px
-			}</style>
-			<h2><span style="color:white"><"Rs${cp.price }</span></h2>
+			<p class="description-text"><span style="color:whitesmoke" style="padding: 100px">${cp.description }.</span></p>
+			
+			
+			<h2><span style="color:white" style="padding: 100px">Rs${cp.price }</span></h2>
 			<div class="quantity-wrapper">
 				<div>
 					<label for="quantity" style="padding: 100px"><span style="color:white">Quantity:</span></label>
-	<style>
-			div{
-			padding-left : 100px
-			}
+
 	
 						<option value="1" selected><span style="color:white">${cp.quantity }</span></option>
 						</style>
@@ -120,18 +115,15 @@
 				
 				<div>
 				<form action="/removeproduct">
-				<style>
-			div{
-			padding-left : 100px
-			}
-	
+				
+			
 					     <input type ="hidden" name="username" value=${cp.username }></input>
 					     <input type ="hidden" name="id" value=${cp.id }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
                           <button type="submit" class="btn-remove"><span style="color:white">Remove</span></button>
                           
-                        </style>
+                       
 					</form>
 				</div>
 				
