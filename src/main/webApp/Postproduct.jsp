@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add Product</title>
 
         <link rel="stylesheet" href="main.css">
         <!-- Latest compiled and minified CSS -->
