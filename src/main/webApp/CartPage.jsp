@@ -50,7 +50,7 @@
 							<input type ="hidden" name="username" value=${user.username }></input>
 						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
 				 
-							 <button  type="submit" class="btn btn-primary btn-lg"> Home</button> 
+							 <button  type="submit" class="btn btn-outline-dark"> Home</button> 
 							 
 						   
 					   </form>
@@ -62,7 +62,7 @@
 					     <input type ="hidden" name="username" value=${user.username }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
-                          <button  type="submit" class="btn btn-primary btn-lg"> Cart</button> 
+                          <button  type="submit" class="btn btn-outline-dark"> Cart</button> 
                           
                         
 					</form>
@@ -71,15 +71,15 @@
 						 <form action="/Checkout">
 						    <input type="hidden" name="username" value=${user.username }></input>
 						    <input type="hidden" name="password" value=${user.getPassword() }></input> 
-						     <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  > Checkout</button>
+						     <button id="btnSubmit" type="submit" class="btn btn-outline-dark"  > Checkout</button>
 						   </form>
 				</li>		   
 					<li class="nav-item active">
-					<a href="" class="nav-link" > Orders Placed </a>
+					<a href="" class="btn btn-outline-dark" > Orders Placed </a>
 				   </li>
 
 				   <li class="nav-item active">
-					<a href="/Faq" class="nav-link" > FAQ </a>
+					<a href="/Faq" class="btn btn-outline-dark" > FAQ </a>
 				   </li>
 				   
 				   </ul>
@@ -91,7 +91,7 @@
 				   
 				   
 				   <form action="/getDetails" method="GET">
-  <button type="submit" class="btn btn-primary btn-lg" name="username" id="username" value=${user.username }> Details</button> 
+  <button type="submit" class="btn btn-outline-dark" name="username" id="username" value=${user.username }> Details</button> 
   </form>
 				
 			</div>
@@ -120,7 +120,7 @@
 					
 					<form class="margin-t" action="/individualProduct" >
 						
-					<button type="submit" class="btn btn-primary btn-lg" name="id" id="id" value=${cp.id }> Details</button>
+					<button type="submit" class="btn btn-outline-info" name="id" id="id" value=${cp.id }> Details</button>
 					
                         
                         </form>
@@ -130,7 +130,7 @@
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${cp.id }></input> 
                         <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                        <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg"  > Save Quantity</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-outline-light"  > Save Quantity</button>
                        
                         
                         </form>

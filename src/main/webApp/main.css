@@ -36,30 +36,7 @@ body {
     border-bottom: 1px solid #FFEB3B !important;
 }
 
-/* Buttons */
-.button {
-    border-radius: 3px;
-}
-.form-button {
-    background-color: rgba(255, 235, 59, 0.24);
-    border-color: rgba(255, 235, 59, 0.24);
-    color: #e6e6e6;
-}
-.form-button:hover,
-.form-button:focus,
-.form-button:active,
-.form-button.active,
-.form-button:active:focus,
-.form-button:active:hover,
-.form-button.active:hover,
-.form-button.active:focus {
-    background-color: rgba(255, 235, 59, 0.473);
-    border-color: rgba(255, 235, 59, 0.473);
-    color: #e6e6e6;
-}
-.button-l {
-    width: 100% !important;
-}
+
 
 /* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
 

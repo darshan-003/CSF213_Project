@@ -35,7 +35,7 @@
 							<input type ="hidden" name="username" value=${user.username }></input>
 						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
 				 
-							 <button  type="submit" class="btn btn-primary btn-lg"> Home</button> 
+							 <button  type="submit"  class="btn btn-outline-dark"> Home</button> 
 							 
 						   
 					   </form>
@@ -48,7 +48,7 @@
 					     <input type ="hidden" name="username" value=${user.username }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
-                          <button  type="submit" class="btn btn-primary btn-lg"> Cart</button> 
+                          <button  type="submit"  class="btn btn-outline-dark"> Cart</button> 
                           
                         
 					</form>
@@ -57,12 +57,12 @@
 				</li>
 
 					<li class="nav-item active">
-					<a href="" class="nav-link" > Orders Placed </a>
+					<a href=""  class="btn btn-outline-dark" > Orders Placed </a>
 				   </li>
 				   
 
 				   <li class="nav-item active">
-					<a href="/Faq" class="nav-link" > FAQ </a>
+					<a href="/Faq"  class="btn btn-outline-dark" > FAQ </a>
 				   </li>
 				   
 				   </ul>
@@ -74,7 +74,7 @@
 				   
 				   
 					   <form action="/getDetails" method="GET">
-  <button type="submit" class="btn btn-primary btn-lg" name="username" id="username" value=${user.username }> Details</button> 
+  <button type="submit" class="btn btn-outline-dark" name="username" id="username" value=${user.username }> Details</button> 
   </form>
 				
 			</div>
@@ -103,7 +103,7 @@
 			<p class="description-text"><span style="color:whitesmoke" style="padding: 100px">${cp.description }.</span></p>
 			
 			
-			<h2><span style="color:white" style="padding: 100px">Rs${cp.price }</span></h2>
+			<h2><span style="color:white" style="padding: 100px">Rs ${cp.price }</span></h2>
 			<div class="quantity-wrapper">
 				<div>
 					<label for="quantity" style="padding: 100px"><span style="color:white">Quantity:</span></label>
