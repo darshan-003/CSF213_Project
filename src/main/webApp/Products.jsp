@@ -106,8 +106,8 @@
 						<c:forEach items="${product}" var="product">
 
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-								<div class="card" style="width: 18rem" ; align-self: center;>
-									<img class="card-img-top" src=${product.imageUrl } height="200px">
+								<div class="card" style="width: 18rem;height:30rem" ; align-self: center;>
+									<img class="card-img-top" src=${product.imageUrl } height="200px" width="200px">
 
 									<div class="card-body">
 
@@ -132,11 +132,9 @@
 										<form class="margin-t" action="/addToCart" id="addToCartForm">
 											<input type="hidden" name="username" value=${user.username }></input>
 											<input type="hidden" name="id" value=${product.id }></input>
-											<input type="hidden" name="id" value=${product.id }></input>
-											<input type="hidden" name="id" value=${product.id }></input>
+
 											<input type="hidden" name="password" value=${user.getPassword() }></input>
-											<input type="hidden" name="password" value=${user.getPassword() }></input>
-											<input type="hidden" name="password" value=${user.getPassword() }></input>
+
 											<button id="btnSubmit" type="submit" class="btn btn-outline-success"> Add To
 												Cart</button>
 
