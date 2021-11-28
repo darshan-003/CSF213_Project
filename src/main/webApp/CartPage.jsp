@@ -45,57 +45,48 @@
 				<ul id="cni" class="navbar-nav ml-auto" >
 
 					<li class="nav-item active">
-					
 						<form action="/getUser">
-							<input type ="hidden" name="username" value=${user.username }></input>
-						   <input type ="hidden" name="password" value=${user.getPassword() }></input>
-				 
-							 <button  type="submit" class="btn btn-outline-dark"> Home</button> 
-							 
-						   
-					   </form>
-				</li>
-				
+							<input type="hidden" name="username" value=${user.username }></input>
+							<input type="hidden" name="password" value=${user.getPassword() }></input>
 
-					<li class="nav-item active">
-					<form action="/cart">
-					     <input type ="hidden" name="username" value=${user.username }></input>
-                        <input type ="hidden" name="password" value=${user.getPassword() }></input>
-              
-                          <button  type="submit" class="btn btn-outline-dark"> Cart</button> 
-                          
-                        
-					</form>
-				</li>
-				<li class="nav-item active">
-						 <form action="/Checkout">
-						    <input type="hidden" name="username" value=${user.username }></input>
-						    <input type="hidden" name="password" value=${user.getPassword() }></input> 
-						     <button id="btnSubmit" type="submit" class="btn btn-outline-dark"  > Checkout</button>
-						   </form>
-				</li>		   
-					<li class="nav-item active">
-					<a href="" class="btn btn-outline-dark" > Orders Placed </a>
-				   </li>
+							<button type="submit" class="btn nav-item-link"> Home</button>
 
-				   <li class="nav-item active">
-					<a href="/Faq" class="btn btn-outline-dark" > FAQ </a>
-				   </li>
-				   
-				   </ul>
-				   
-				   
-				   
-				   
-				   
-				   
-				   
-				   <form action="/getDetails" method="GET">
-  <button type="submit" class="btn btn-outline-dark" name="username" id="username" value=${user.username }> Details</button> 
-  </form>
-				
+
+						</form>
+
+					</li>
+					<li class="nav-item active">
+
+						<form action="/cart">
+							<input type="hidden" name="username" value=${user.username }></input>
+							<input type="hidden" name="password" value=${user.getPassword() }></input>
+
+							<button type="submit" class="btn nav-item-link"> Cart</button>
+
+
+						</form>
+					</li>
+					<li class="nav-item active">
+						<form action="/Checkout">
+						   <input type="hidden" name="username" value=${user.username }></input>
+						   <input type="hidden" name="password" value=${user.getPassword() }></input> 
+							<button id="btnSubmit" type="submit" class="btn nav-item-link"  > Checkout</button>
+						  </form>
+			   </li>	
+					<li class="nav-item active">
+						<button href="" class="btn nav-item-link"> Orders Placed </a>
+					</li>
+					<li class="nav-item active">
+						<button href="/Faq" class="btn nav-item-link"> FAQ </a></button>
+					</li>
+				</ul>
+				<form action="/getDetails" method="GET">
+					<button type="submit" class="btn nav-item-link" name="username" id="username"
+						value=${user.username }> Details</button>
+				</form>
+
 			</div>
-		</div>
+			</div>
 	</nav>
 	
 	
@@ -148,13 +139,5 @@
         
     
 </c:forEach>
-
-
-</form>
-<script>
-</script>
-
-
-  
 </body>
 </html>
