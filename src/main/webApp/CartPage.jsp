@@ -32,9 +32,9 @@
 <nav class="navbar navbar-expand-md navbar-light sticky-top  " >
 
 		<div class="container-fluid">
-			<a href="index.html" class="navbar-brand" >
+			
 				<img id="logoimg" src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
-			</a>
+			
 
 			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Item" >
 				<span class="navbar-toggler-icon" ></span>
@@ -130,7 +130,7 @@
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${cp.id }></input> 
                         <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                        <button id="btnSubmit" type="submit" class="btn btn-outline-light"  > Save Quantity</button>
+                        <button id="btnSubmit" type="submit" class="btn btn-outline-info"  > Save Quantity</button>
                        
                         
                         </form>
