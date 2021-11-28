@@ -120,11 +120,13 @@
 										
 										<br>
 
-								
-										<form class="margin-t" action="/individualProduct">
-
-											<button type="submit" class="btn btn-outline-info" name="id" id="id"
-												value=${product.id }> Details</button>
+								<form class="margin-t" action="/individualProduct" id="individualProduct">
+											<input type="hidden" name="username" value=${user.username }></input>
+											<input type="hidden" name="id" value=${product.id }></input>
+											
+											<input type="hidden" name="password" value=${user.getPassword() }></input>
+											
+											<button id="btnSubmit" type="submit" class="btn btn-outline-success"> Details</button>
 
 
 										</form>
