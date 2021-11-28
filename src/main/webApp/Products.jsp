@@ -35,42 +35,35 @@
 
 				</button>
 
-				<div class="collapse navbar-collapse  " id="Item">
-					<ul id="cni" class="navbar-nav ml-auto">
-
+				<div class="collapse navbar-collapse  " id="Item" >
+					<ul id="cni" class="navbar-nav ml-auto" >
 						<li class="nav-item active">
 							<form action="/getUser">
-								<input type="hidden" name="username" value=${user.username }></input>
-								<input type="hidden" name="password" value=${user.getPassword() }></input>
-
-								<button type="submit"  class="btn nav-item-link" > Home</button>
+								<input type ="hidden" name="username" value=${user.username }></input>
+							   <input type ="hidden" name="password" value=${user.getPassword() }></input>
+								 <button  type="submit"  class="btn nav-item-link"> Home</button> 
+						   </form>
+					</li>
+						<li class="nav-item active">
+						<form action="/cart">
+							 <input type ="hidden" name="username" value=${user.username }></input>
+							<input type ="hidden" name="password" value=${user.getPassword() }></input>
+							  <button  type="submit"  class="btn nav-item-link"> Cart</button> 
+						</form>
+					</li>
+						<li class="nav-item active">
+						<button href=""  class="btn nav-item-link" > Orders Placed </a>
+					   </li>
+					   <li class="nav-item active">
+						   <button href="/Faq"  class="btn nav-item-link" > FAQ </a>
+						</li>
+						<li class="nav-item active">
+				<form action="/getDetails" method="GET">
+								<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username }> Details</button> 
 							</form>
-
 						</li>
-
-
-						<li class="nav-item active">
-
-							<form action="/cart">
-								<input type="hidden" name="username" value=${user.username }></input>
-								<input type="hidden" name="password" value=${user.getPassword() }></input>
-								<button type="submit" class="btn nav-item-link" > Cart</button>
-							</form>
-						</li>
-						<li class="nav-item active">
-							<button href=""   class="btn nav-item-link"> Orders Placed </a>
-						</li>
-						<li class="nav-item active">
 						
-							<button href="/Faq"  class="btn nav-item-link"> FAQ </a></button>
-						</li>
-					</ul>
-					<form action="/getDetails" method="GET">
-						<button type="submit"  class="btn nav-item-link" name="username" id="username"
-							value=${user.username }> Details</button>
-					</form>
-
-				</div>
+					</ul>	   
 				</div>
 			</nav>
 			<div class="container mt-4">

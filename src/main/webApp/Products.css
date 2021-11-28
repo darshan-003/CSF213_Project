@@ -4,7 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: #424242;
+  background-color: whitesmoke;
   color: #222;
 }
 
@@ -21,7 +21,6 @@ body {
 .card {
   width: 600px;
   height: 800px;
-  border: 2px solid;
   margin-bottom: 15px;
 }
 
@@ -30,7 +29,7 @@ body {
 }
 
 .navbar {
-  background-color: #f5f5f5;
+  background-color: #424242;
   height: 75px;
 }
 
@@ -44,12 +43,14 @@ body {
   padding-right: 20px;
 }
 .nav-item-link {
-  color: aliceblue !important;
-  border: 1px solid aliceblue !important;
-  font-size: 1.4em;
+  color: #424242 !important;
+  border: 1px solid #424242!important;
   border-radius: 0.25rem;
-  background-color: #585858 !important;
+  width: 120px;
+  font-size: 1rem;
+  background-color: whitesmoke !important;
 }
+
 .carousel-caption {
   color: #000000;
   transform: translateY(-40%);
@@ -79,7 +80,7 @@ body {
 }
 
 #btnSubmit{
-  width: 300px;
+  width: 120px;
   height: 40px;
 }
 
