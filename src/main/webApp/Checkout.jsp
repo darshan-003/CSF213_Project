@@ -94,7 +94,7 @@
 	<c:forEach items="${cp}" var="cp">
 	<div class="bag-product">
 		<div class="image">
-			<img src=${cp.imageUrl } class="product-image">
+			<img src=${cp.imageUrl } class="product-image"  height="200px" width="200px">
 		</div>
 		<div class="description">
 			

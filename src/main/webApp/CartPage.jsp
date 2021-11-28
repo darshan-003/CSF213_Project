@@ -104,7 +104,7 @@
 	
 		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >
 			<div class="card" >
-				<img class="card-img-top" src=${cp.imageUrl } height="200px" >
+				<img class="card-img-top" src=${cp.imageUrl } height="200px" width="200px" >
 
 				<div class="card-body" >
 				

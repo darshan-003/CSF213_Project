@@ -49,7 +49,7 @@ public class ProductController {
 		
 		mv.addObject("product", product) ;
 		
-		mv.setViewName("Products.jsp") ;
+		mv.setViewName("adminpage.jsp") ;
 	
 		
 		
