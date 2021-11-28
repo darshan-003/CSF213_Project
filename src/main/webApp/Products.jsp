@@ -13,8 +13,6 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 
 			<title>Products</title>
-
-
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -22,16 +20,9 @@
 
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-			<link href="Products.css" rel="stylesheet" type="text/css">
-
-
+			<link rel="stylesheet" type="text/css" href="Products.css"  >
 		</head>
-
 		<body>
-
-
-
-
 			<nav class="navbar navbar-expand-md navbar-light sticky-top  ">
 
 
@@ -52,9 +43,7 @@
 								<input type="hidden" name="username" value=${user.username }></input>
 								<input type="hidden" name="password" value=${user.getPassword() }></input>
 
-								<button type="submit"  class="btn btn-outline-dark " > Home</button>
-
-
+								<button type="submit"  class="btn nav-item-link" > Home</button>
 							</form>
 
 						</li>
@@ -65,48 +54,32 @@
 							<form action="/cart">
 								<input type="hidden" name="username" value=${user.username }></input>
 								<input type="hidden" name="password" value=${user.getPassword() }></input>
-
-								<button type="submit" class="btn btn-outline-dark " > Cart</button>
-
-
+								<button type="submit" class="btn nav-item-link" > Cart</button>
 							</form>
 						</li>
-
 						<li class="nav-item active">
-							<a href=""   class="btn btn-outline-dark"> Orders Placed </a>
+							<button href=""   class="btn nav-item-link"> Orders Placed </a>
 						</li>
-
-
 						<li class="nav-item active">
 						
-							<a href="/Faq"  class="btn btn-outline-dark"> FAQ </a></button>
+							<button href="/Faq"  class="btn nav-item-link"> FAQ </a></button>
 						</li>
-
 					</ul>
-
-
-
-
-
-
-
 					<form action="/getDetails" method="GET">
-						<button type="submit"  class="btn btn-outline-dark" name="username" id="username"
+						<button type="submit"  class="btn nav-item-link" name="username" id="username"
 							value=${user.username }> Details</button>
 					</form>
 
 				</div>
 				</div>
 			</nav>
-
-
 			<div class="container mt-4">
 				<div class="row">
 					<div class="card-deck">
 						<c:forEach items="${product}" var="product">
 
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-								<div class="card" style="width: 18rem;height:30rem" ; align-self: center;>
+							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+								<div class="card mb-3" style="width: 18rem;height:30rem" ; align-self: center;>
 									<img class="card-img-top" src=${product.imageUrl } height="200px" width="200px" >
 
 									<div class="card-body">
@@ -115,36 +88,40 @@
 
 										<h5 style="text-align: center;">${product.name} - Rs ${product.price}</h5>
 
+										<br>
+									<div id="submitContainer" class="col-6">
+										<!-- <ul class="ml-auto"> -->
+											<!-- <li class="active"> -->
 
+												<form class="margin-t" action="/individualProduct" id="individualProduct">
+													<input type="hidden" name="username" value=${user.username }></input>
+													<input type="hidden" name="id" value=${product.id }></input>
+													
+													<input type="hidden" name="password" value=${user.getPassword() }></input>
+													
+													<button id="btnSubmit" type="submit" class="btn btn-outline-success detailsButton"> Details</button>
+													
+													
+												</form>
+											<!-- </li>
+											<li class="active"> -->
 
+												<form class="margin-t" action="/addToCart" id="addToCartForm">
+													<input type="hidden" name="username" value=${user.username }></input>
+													<input type="hidden" name="id" value=${product.id }></input>
+													
+													<input type="hidden" name="password" value=${user.getPassword() }></input>
+													
+													<button id="btnSubmit" type="submit" class="btn btn-outline-success addToCartButton" onclick="return alertFunction();" > Add To
+														Cart</button>
+														
+														
+													</form>
+												<!-- </li> -->
+										<!-- </ul> -->
+											
+										</div>
 										
-										<br>
-
-								<form class="margin-t" action="/individualProduct" id="individualProduct">
-											<input type="hidden" name="username" value=${user.username }></input>
-											<input type="hidden" name="id" value=${product.id }></input>
-											
-											<input type="hidden" name="password" value=${user.getPassword() }></input>
-											
-											<button id="btnSubmit" type="submit" class="btn btn-outline-success"> Details</button>
-
-
-										</form>
-										<br>
-
-										<form class="margin-t" action="/addToCart" id="addToCartForm">
-											<input type="hidden" name="username" value=${user.username }></input>
-											<input type="hidden" name="id" value=${product.id }></input>
-
-											<input type="hidden" name="password" value=${user.getPassword() }></input>
-
-											<button   id="btnSubmit" type="submit" class="btn btn-outline-success"> Add To
-												Cart</button>
-
-
-										</form>
-
-
 									</div>
 								</div>
 							</div>
@@ -163,6 +140,9 @@
 			</div>
 				</form>
 				<script>
+					function alertFunction() {
+					  alert("Added to Cart");
+					}
 				</script>
 
 

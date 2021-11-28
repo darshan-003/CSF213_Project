@@ -35,12 +35,16 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Answer" name="description" >
                             </div>
-                            <button type="submit" class="form-button button-l margin-b">Save</button>
+                            <button type="submit" class="form-button button-l margin-b" onclick="return alertFunction();">Save</button>
             
                             
                         </form>
         </div>
      </div>
-		
+     <script>
+        function alertFunction() {
+          alert("FAQ Added");
+        }
+    </script>
 </body>
 </html>
