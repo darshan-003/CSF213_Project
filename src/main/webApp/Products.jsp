@@ -52,7 +52,7 @@
 								<input type="hidden" name="username" value=${user.username }></input>
 								<input type="hidden" name="password" value=${user.getPassword() }></input>
 
-								<button type="submit"  class="btn btn-outline-dark"> Home</button>
+								<button type="submit"  class="btn btn-outline-dark " > Home</button>
 
 
 							</form>
@@ -66,7 +66,7 @@
 								<input type="hidden" name="username" value=${user.username }></input>
 								<input type="hidden" name="password" value=${user.getPassword() }></input>
 
-								<button type="submit" class="btn btn-outline-dark"> Cart</button>
+								<button type="submit" class="btn btn-outline-dark " > Cart</button>
 
 
 							</form>
@@ -107,27 +107,30 @@
 
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 								<div class="card" style="width: 18rem;height:30rem" ; align-self: center;>
-									<img class="card-img-top" src=${product.imageUrl } height="200px" width="200px">
+									<img class="card-img-top" src=${product.imageUrl } height="200px" width="200px" >
 
 									<div class="card-body">
 
 
 
-										<h3 style="text-align: center;">${product.name} - Rs ${product.price}</h3>
+										<h5 style="text-align: center;">${product.name} - Rs ${product.price}</h5>
 
 
 
-										<p class="card-text"> ${product.description} </p>
+										
 										<br>
 
-
-										<form class="margin-t" action="/individualProduct">
-
-											<button type="submit" class="btn btn-outline-info" name="id" id="id"
-												value=${product.id }> Details</button>
+								<form class="margin-t" action="/individualProduct" id="individualProduct">
+											<input type="hidden" name="username" value=${user.username }></input>
+											<input type="hidden" name="id" value=${product.id }></input>
+											
+											<input type="hidden" name="password" value=${user.getPassword() }></input>
+											
+											<button id="btnSubmit" type="submit" class="btn btn-outline-success"> Details</button>
 
 
 										</form>
+										<br>
 
 										<form class="margin-t" action="/addToCart" id="addToCartForm">
 											<input type="hidden" name="username" value=${user.username }></input>
@@ -135,7 +138,7 @@
 
 											<input type="hidden" name="password" value=${user.getPassword() }></input>
 
-											<button id="btnSubmit" type="submit" class="btn btn-outline-success"> Add To
+											<button   id="btnSubmit" type="submit" class="btn btn-outline-success"> Add To
 												Cart</button>
 
 

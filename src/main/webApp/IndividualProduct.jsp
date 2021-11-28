@@ -25,48 +25,73 @@
 <body>
 
 
-<nav class="navbar navbar-expand-md navbar-light sticky-top  " >
-		<div class="container-fluid">
-			<a href="index.html" class="navbar-brand" >
-				<img id="logoimg" src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
-			</a>
+	
+	<nav class="navbar navbar-expand-md navbar-light sticky-top  ">
 
-			<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Item" >
-				<span class="navbar-toggler-icon" ></span>
 
-			</button>
+		<img id="logoimg"
+			src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png">
 
-			<div class="collapse navbar-collapse  " id="Item" >
-				<ul id="cni" class="navbar-nav ml-auto" >
 
-					<li class="nav-item active">
-					<a href="index.html" class="nav-link" > Home </a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Item">
+			<span class="navbar-toggler-icon"></span>
+
+		</button>
+
+		<div class="collapse navbar-collapse  " id="Item">
+			<ul id="cni" class="navbar-nav ml-auto">
+
+				<li class="nav-item active">
+					<form action="/getUser">
+						<input type="hidden" name="username" value=${user.username }></input>
+						<input type="hidden" name="password" value=${user.getPassword() }></input>
+
+						<button type="submit"  class="btn btn-outline-dark"> Home</button>
+
+
+					</form>
+
 				</li>
 
 
-					<li class="nav-item active">
-					<a href="#ABT-ME" class="nav-link" > Add Products </a>
+				<li class="nav-item active">
+
+					<form action="/cart">
+						<input type="hidden" name="username" value=${user.username }></input>
+						<input type="hidden" name="password" value=${user.getPassword() }></input>
+
+						<button type="submit" class="btn btn-outline-dark"> Cart</button>
+
+
+					</form>
 				</li>
 
-					<li class="nav-item active">
-					<a href="#MSKL" class="nav-link" > Cart </a>
+				<li class="nav-item active">
+					<a href=""   class="btn btn-outline-dark"> Orders Placed </a>
 				</li>
 
-					<li class="nav-item active">
-					<a href="" class="nav-link" > Orders Placed </a>
-				   </li>
 
-				   <li class="nav-item active">
-					<a href="#CONTACT" class="nav-link" > FAQ </a>
-				   </li>
+				<li class="nav-item active">
+				
+					<a href="/Faq"  class="btn btn-outline-dark"> FAQ </a></button>
+				</li>
 
-				</ul>
-			</div>
+			</ul>
+
+
+
+
+
+
+
+			<form action="/getDetails" method="GET">
+				<button type="submit"  class="btn btn-outline-dark" name="username" id="username"
+					value=${user.username }> Details</button>
+			</form>
+
+		</div>
 		</div>
 	</nav>
-	
-	
-	
 
 
 		
@@ -85,13 +110,18 @@
 					<br>
 					
 
-					<form class="margin-t" action="/individualProduct" >
-					
-					<button type="submit" class="btn btn-primary btn-lg"> Details</button>
-                        
-                        	
-                        
-                        </form>
+				
+						<form class="margin-t" action="/addToCart" id="addToCartForm">
+							<input type="hidden" name="username" value=${user.username }></input>
+							<input type="hidden" name="id" value=${product.id }></input>
+							
+							<input type="hidden" name="password" value=${user.getPassword() }></input>
+							
+							<button id="btnSubmit" type="submit" class="btn btn-outline-succes"> Add To
+								Cart</button>
+
+
+						</form>
 
 				</div>
 			</div>

@@ -89,31 +89,31 @@
 	
 	
 	<div class="bag">
-		<p class="bag-head"><span style="color:white">Your Cart</span></p>
+		<h5 class="bag-head"><span style="color:white">Your Cart</span></h5>
 	</div>
 	<c:forEach items="${cp}" var="cp">
-	<div class="bag-product">
-		<div class="image">
+	<div class="bag-product" >
+		<div class="image"  >
 			<img src=${cp.imageUrl } class="product-image"  height="200px" width="200px">
 		</div>
 		<div class="description">
 			
-			<h1><span style="color:yellow" style="padding: 100px">${cp.name }</span></h1>
+			<h5><span style="color:yellow" style="padding: 100px">${cp.name }</span></h5>
 			
-			<p class="description-text"><span style="color:whitesmoke" style="padding: 100px">${cp.description }.</span></p>
+			<br>
 			
-			
-			<h2><span style="color:white" style="padding: 100px">Rs ${cp.price }</span></h2>
-			<div class="quantity-wrapper">
+			<h5><span style="color:white" style="padding: 100px">Rs ${cp.price }</span></h5>
+			<div class="quantity-wrapper" >
 				<div>
-					<label for="quantity" style="padding: 100px"><span style="color:white">Quantity:</span></label>
-
-	
-						<option value="1" selected><span style="color:white">${cp.quantity }</span></option>
-						</style>
+					<label for="quantity" ><span style="color:white">Quantity: ${cp.quantity }</span></label>
+						
+				<div style="padding: 50px">
+				
+				</div>		
+				
 				</div>
 				
-				<div>
+			<div>
 				<form action="/removeproduct">
 				
 			
