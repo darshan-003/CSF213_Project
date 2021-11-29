@@ -14,13 +14,14 @@
 	
 	<title>Products</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link href="Checkout.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	
-	<link href="Products.css" rel="stylesheet">
+
+</head>
 
 
 </head>
@@ -74,7 +75,7 @@
 						  </form>
 			   </li>	
 					<li class="nav-item active">
-						<button href="" class="btn nav-item-link"> Orders Placed </a>
+						<button href="" class="btn nav-item-link"> Orders Placed </a></button>
 					</li>
 					<li class="nav-item active">
 						<button href="/Faq" class="btn nav-item-link"> FAQ </a></button>
@@ -91,32 +92,40 @@
 	
 	
 
-<c:forEach items="${cp}" var="cp">
+
+
+
+
+          
+     
+        
+        
+    
+<div class="center-wrapper">
+	<div class="content">
 	
-		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4" >
-			<div class="card" >
-				<img class="card-img-top" src=${cp.imageUrl } height="200px" width="200px" >
 
-				<div class="card-body" >
-				
 
-				
-					<h3 style="text-align: center;">${cp.name} - Rs ${cp.price}</h3>
-					
-					
 
-					<p class="card-text" > ${cp.description} </p>
-					<br>
-					
-					
-					<form class="margin-t" action="/individualProduct" >
-						
-					<button type="submit" class="btn btn-outline-info" name="id" id="id" value=${cp.id }> Details</button>
-					
-                        
-                        </form>
-                        
-                        <form class="margin-t" action="/cartQuantity"  id="changeQuantity">   
+	<div class="bag">
+		<h5 class="bag-head"><span style="color:black">Your Cart</span></h5>
+	</div>
+	
+	<c:forEach items="${cp}" var="cp">
+	<div class="bag-product" >
+		<div class="image"  >
+			<img src=${cp.imageUrl } class="product-image"  height="200px" width="200px">
+		</div>
+		<div class="description">
+			
+			<h5><span style="color:black" style="padding: 100px">${cp.name }</span></h5>
+			
+			<br>
+			
+			<h5><span style="color:black" style="padding: 100px">Rs ${cp.price }</span></h5>
+			
+			
+			 <form class="margin-t" action="/cartQuantity"  id="changeQuantity">   
                          <input type="text" name="quantity" value=${cp.quantity }></input>
                         <input type="hidden" name="username" value=${user.username }></input>
                         <input type="hidden" name="id" value=${cp.id }></input> 
@@ -124,20 +133,27 @@
                         <button id="btnSubmit" type="submit" class="btn btn-outline-info"  > Save Quantity</button>
                        
                         
-                        </form>
+               </form>
+               
+               <br>
+               </div>
+               </div>
+               
+        </c:forEach>
+        
                         
-
-				</div>
-			</div>
-		</div>
-	
+</div>
+</div>	
 
 
-          
-        
-        
-        
-    
-</c:forEach>
+		
+			
+			
+
+
+
+
+
+
 </body>
 </html>

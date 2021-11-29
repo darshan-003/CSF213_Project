@@ -142,9 +142,9 @@ input[type="text"] {
   height: 40px;
 }
 
-button {
+.button {
   cursor: pointer;
-  width: 100px;
+  width: 125px;
   background: none;
   border-radius: 4px;
 }
