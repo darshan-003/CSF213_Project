@@ -77,8 +77,11 @@
 					<li class="nav-item active">
 						<button href="" class="btn nav-item-link"> Orders Placed </a></button>
 					</li>
-					<li class="nav-item active">
-						<button href="/Faq" class="btn nav-item-link"> FAQ </a></button>
+					  <li class="nav-item active">	
+					   <form action="/Faq">
+							
+							  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
+						</form>
 					</li>
 				</ul>
 				<form action="/getDetails" method="GET">
