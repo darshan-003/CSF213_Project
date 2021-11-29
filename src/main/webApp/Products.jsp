@@ -44,19 +44,28 @@
 								 <button  type="submit"  class="btn nav-item-link"> Home</button> 
 						   </form>
 					</li>
+					
 						<li class="nav-item active">
 						<form action="/cart">
 							 <input type ="hidden" name="username" value=${user.username }></input>
 							<input type ="hidden" name="password" value=${user.getPassword() }></input>
 							  <button  type="submit"  class="btn nav-item-link"> Cart</button> 
 						</form>
+					</li >
+							
+				   
+				   <li class="nav-item active">
+					   <form action="/Orders">
+							
+							  <button  type="submit"  class="btn nav-item-link"> Orders </button> 
+						</form>
 					</li>
-						<li class="nav-item active">
-						<button href=""  class="btn nav-item-link" > Orders Placed </a>
-					   </li>
-					   <li class="nav-item active">
-						   <button href="/Faq"  class="btn nav-item-link" > FAQ </a>
-						</li>
+					   <li class="nav-item active">	
+					   <form action="/Faq">
+							
+							  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
+						</form>
+					</li>
 						<li class="nav-item active">
 				<form action="/getDetails" method="GET">
 								<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username }> Details</button> 
