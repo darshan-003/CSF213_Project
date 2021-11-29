@@ -75,7 +75,7 @@
 						  </form>
 			   </li>	
 					<li class="nav-item active">
-						<button href="" class="btn nav-item-link"> Orders Placed </a></button>
+						<a href="" class="btn nav-item-link"> Orders Placed </a></button>
 					</li>
 					  <li class="nav-item active">	
 					   <form action="/Faq">
@@ -92,26 +92,12 @@
 			</div>
 			</div>
 	</nav>
-	
-	
 
-
-
-
-
-          
-     
-        
-        
-    
 <div class="center-wrapper">
 	<div class="content">
-	
-
-
-
 	<div class="bag">
 		<h5 class="bag-head"><span style="color:black">Your Cart</span></h5>
+		<hr>
 	</div>
 	
 	<c:forEach items="${cp}" var="cp">
@@ -129,11 +115,11 @@
 			
 			
 			 <form class="margin-t" action="/cartQuantity"  id="changeQuantity">   
-                         <input type="text" name="quantity" value=${cp.quantity }></input>
-                        <input type="hidden" name="username" value=${user.username }></input>
-                        <input type="hidden" name="id" value=${cp.id }></input> 
-                        <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                        <button id="btnSubmit" type="submit" class="btn btn-outline-info"  > Save Quantity</button>
+                    <input type="text" name="quantity" value=${cp.quantity }></input>
+                    <input type="hidden" name="username" value=${user.username }></input>
+                    <input type="hidden" name="id" value=${cp.id }></input> 
+                    <input type="hidden" name="password" value=${user.getPassword() }></input> 
+                    <button id="btnSubmit" type="submit" class="btn btn-outline-info"  > Save Quantity</button>
                        
                         
                </form>
@@ -141,7 +127,7 @@
                <br>
                </div>
                </div>
-               
+               <hr>
         </c:forEach>
         
                         
