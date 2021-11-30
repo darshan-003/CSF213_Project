@@ -132,6 +132,43 @@ public class CartController {
 
 	}
 
+	
+	
+	@RequestMapping("/Orders")
+	public ModelAndView viewOrders(/*
+									 * @PathVariable ("username") String username, @PathVariable ("password") String
+									 * password
+									 */ @RequestParam String username, @RequestParam String password) {
+		// showing cart page- loading from cart database by searching by username
+		// username and password is received when Cart button is clicked.
+		ModelAndView mv = new ModelAndView();
+
+		// List<CartProduct> OldProdList = cart_repo.findByUsername(username);
+
+		List<User> UserList;
+		UserList = repo.findByUsername(username);
+
+		if (UserList.isEmpty()) {
+			mv.setViewName("user_incorrect.jsp");
+			return mv;
+		}
+
+		User user = UserList.get(0);
+
+		List<OrderHistory> cp = order_repo.findByUsername(username);
+
+		mv.addObject("user", user);
+		mv.addObject("cp", cp);
+
+		mv.setViewName("Orders.jsp");
+		// System.out.println(username+"working"+password);
+		return mv;
+
+	}
+
+	
+	
+	
 	@RequestMapping("/cartQuantity")
 	// page run when Quantity changed in cart page
 	public ModelAndView viewCartQuantity(

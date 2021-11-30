@@ -56,47 +56,48 @@
 						</form>
 
 					</li>
-					
 					<li class="nav-item active">
-						<form action="/Checkout">
-						   <input type="hidden" name="username" value=${user.username }></input>
-						   <input type="hidden" name="password" value=${user.getPassword() }></input> 
-							<button id="btnSubmit" type="submit" class="btn nav-item-link"  > Checkout</button>
-						  </form>
-			   </li>	
-					<li class="nav-item active">
-						<form action="/Orders">
-						   <input type="hidden" name="username" value=${user.username }></input>
-						   <input type="hidden" name="password" value=${user.getPassword() }></input> 
-							<button id="btnSubmit" type="submit" class="btn nav-item-link"  > Your Orders</button>
-						  </form>
+
+						<form action="/cart">
+							<input type="hidden" name="username" value=${user.username }></input>
+							<input type="hidden" name="password" value=${user.getPassword() }></input>
+
+							<button type="submit" class="btn nav-item-link"> Cart</button>
+
+
+						</form>
 					</li>
+					
+					
 					  <li class="nav-item active">	
 					   <form action="/Faq">
 							
 							  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
 						</form>
 					</li>
-					<li class="nav-item active">
+					
+					<li class="nav-item active">	
 					<form action="/getDetails" method="GET">
 					<button type="submit" class="btn nav-item-link" name="username" id="username"
 						value=${user.username }> Details</button>
-				</form>
-				</li>
-				
-				<li class="nav-item active">
+					</form>
+					</li>
+					
+					<li class="nav-item active">
 						<form action="/">
 							 
 							  <button  type="submit"  class="btn nav-item-link">Sign out </button> 
 						</form>
 					</li >
 						
-						
-						
-				
 				
 				
 				</ul>
+				
+				
+				
+						
+				
 				
 
 			</div>
@@ -106,7 +107,7 @@
 <div class="center-wrapper">
 	<div class="content">
 	<div class="bag">
-		<h5 class="bag-head"><span style="color:black">Your Cart</span></h5>
+		<h5 class="bag-head"><span style="color:black">Your Orders</span></h5>
 		<hr>
 	</div>
 	
@@ -123,16 +124,10 @@
 			
 			<h5><span style="color:black" style="padding: 100px">Rs ${cp.price }</span></h5>
 			
+			<h5><span style="color:black" style="padding: 100px">Quantity: ${cp.quantity }</span></h5>
 			
-			 <form class="margin-t" action="/cartQuantity"  id="changeQuantity">   
-                    <input type="text" name="quantity" value=${cp.quantity }></input>
-                    <input type="hidden" name="username" value=${user.username }></input>
-                    <input type="hidden" name="id" value=${cp.id }></input> 
-                    <input type="hidden" name="password" value=${user.getPassword() }></input> 
-                    <button id="btnSubmit" type="submit" class="btn btn-outline-info"  > Save Quantity</button>
-                       
-                        
-               </form>
+			
+			 
                
                <br>
                </div>
