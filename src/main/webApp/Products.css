@@ -40,15 +40,14 @@ body {
 .nav-item {
   font-size: 1.4em;
   color: #000000;
-  padding-right: 20px;
 }
 .nav-item-link {
-  color: #424242 !important;
-  border: 1px solid #424242!important;
-  border-radius: 0.25rem;
-  width: 120px;
-  font-size: 1rem;
-  background-color: whitesmoke !important;
+  color: white !important;
+  max-width: 120px;
+  margin-right: 20px;
+  padding: 0px;
+  font-size: 1.2rem;
+  background-color: #424242 !important;
 }
 
 .carousel-caption {
@@ -87,4 +86,10 @@ body {
 
 #submitContainer{
   text-align: center;
+}
+
+.container{
+  margin-left: 150px;
+  padding-left: 0%;
+  padding-right: 0%;
 }

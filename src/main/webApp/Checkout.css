@@ -18,7 +18,7 @@ body {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 20px;
-  width: 100px;
+  width: 120px;
 }
 
 .navbar {
@@ -32,7 +32,14 @@ body {
 .nav-item {
   font-size: 1.4em;
   color: #000000;
-  padding-right: 20px;
+}
+.nav-item-link {
+  color: white !important;
+  max-width: 120px;
+  margin-right: 20px;
+  padding: 0px !important;
+  font-size: 1.2rem !important;
+  background-color: #424242 !important;
 }
 .nav-link:hover {
   font-weight: bold;
@@ -203,19 +210,30 @@ input[type="text"] {
   text-align: center;
 }
 
-.nav-item-link {
-  color: #424242 !important;
-  border: 1px solid #424242!important;
-  border-radius: 0.25rem;
-  width: 120px;
-  font-size: 1rem;
-  background-color: whitesmoke !important;
-}
-
 hr{
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
   width: 7;
   border-top: 2px solid rgba(0,0,0,.1) !important;
+}
+
+.checkoutButton{
+  border-radius: 50px;
+  width: 120px;
+  background-color: darkgrey;
+}
+
+.checkoutButtonDiv{
+  text-align: end;
+}
+
+.removeButton{
+  background: #424242;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.thank{
+  text-align: right;
 }

@@ -15,126 +15,81 @@ import com.example.demo.User;
 
 @Controller
 
-
 public class ProductController {
-	
+
 	@Autowired
-	ProductsRepo repo ;
+	ProductsRepo repo;
 	@Autowired
 	UserRepo userrepo;
-	
+
 	@RequestMapping("/addProduct")
 
-	public String addProduct(Products product)
-	{
-		
-		
-		
+	public String addProduct(Products product) {
+
 		return "Postproduct.jsp";
 	}
-	
-	
-	
-	
-	
-	
+
 	@RequestMapping("/addedProduct")
 
-	public ModelAndView addedProduct(Products product)
-	{
+	public ModelAndView addedProduct(Products product) {
 		repo.save(product);
-		
-		
-		ModelAndView mv = new ModelAndView() ;
-		
-		
-		
-		
-		mv.addObject("product", product) ;
-		
-		mv.setViewName("adminpage.jsp") ;
-	
-		
-		
-		
-		
-		
-		
-		return mv  ;
+
+		ModelAndView mv = new ModelAndView();
+
+		mv.addObject("product", product);
+
+		mv.setViewName("adminpage.jsp");
+
+		return mv;
 	}
-	
-	
+
 	@RequestMapping("/individualProduct")
 
-	public ModelAndView IndividualProduct(@RequestParam String username,@RequestParam String id, @RequestParam String password)
-	{
-		
+	public ModelAndView IndividualProduct(@RequestParam String username, @RequestParam String id,
+			@RequestParam String password) {
+
 		System.out.println("Hey I am in");
-		
+
 		System.out.println(id);
-		
-		ModelAndView mv = new ModelAndView() ;
-		
-		List<Products> productList = repo.findById(id) ; 
-		
-		Products product = productList.get(0) ;
-		
-		List<User>UserList;
-		UserList=  userrepo.findByUsername(username);
-		
-		if(UserList.isEmpty())
-		{
+
+		ModelAndView mv = new ModelAndView();
+
+		List<Products> productList = repo.findById(id);
+
+		Products product = productList.get(0);
+
+		List<User> UserList;
+		UserList = userrepo.findByUsername(username);
+
+		if (UserList.isEmpty()) {
 			mv.setViewName("user_incorrect.jsp");
-			return mv;	
+			return mv;
 		}
-		
-		User user= UserList.get(0);
-		if(user.passwordmatch(password))
-		{
+
+		User user = UserList.get(0);
+		if (user.passwordmatch(password)) {
 			mv.addObject("user", user);
-			mv.addObject("product", product) ;
-			mv.setViewName("IndividualProduct.jsp") ;
+			mv.addObject("product", product);
+			mv.setViewName("IndividualProduct.jsp");
 			return mv;
-		}
-		else
-		{
+		} else {
 			mv.setViewName("user_incorrect.jsp");
 			return mv;
 		}
-		
-		//mv.addObject("product", product) ;
-		
-		//mv.setViewName("Hi") ;
-		
-		//mv.setViewName("IndividualProduct.jsp") ;
-	
-		
-		
-		
-		
-		
-		
-	
+
+		// mv.addObject("product", product) ;
+
+		// mv.setViewName("Hi") ;
+
+		// mv.setViewName("IndividualProduct.jsp") ;
+
 	}
 
 	@RequestMapping("/faq")
 
-	public String Faq()
-	{
-		
-		
-		
+	public String Faq() {
+
 		return "Faq.jsp";
 	}
-	
-	
-	
 
-	
-	
-	
-	
 }
-
-	
-
