@@ -81,7 +81,7 @@
 						<c:forEach items="${product}" var="product">
 
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-								<div class="card mb-3" style="width: 18rem;height:30rem" ; align-self: center;>
+								<div class="card mb-3" style="width: 18rem;height:25rem" ; align-self: center;>
 									<img class="card-img-top" src=${product.imageUrl } height="200px" width="200px" >
 
 									<div class="card-body">
@@ -92,49 +92,24 @@
 
 										<br>
 									<div id="submitContainer" class="col-6">
-										<!-- <ul class="ml-auto"> -->
-											<!-- <li class="active"> -->
-
 												<form class="margin-t" action="/individualProduct" id="individualProduct">
 													<input type="hidden" name="username" value=${user.username }></input>
 													<input type="hidden" name="id" value=${product.id }></input>
-													
 													<input type="hidden" name="password" value=${user.getPassword() }></input>
-													
 													<button id="btnSubmit" type="submit" class="btn btn-outline-success detailsButton"> Details</button>
-													
-													
 												</form>
-											<!-- </li>
-											<li class="active"> -->
-
 												<form class="margin-t" action="/addToCart" id="addToCartForm">
 													<input type="hidden" name="username" value=${user.username }></input>
 													<input type="hidden" name="id" value=${product.id }></input>
-													
 													<input type="hidden" name="password" value=${user.getPassword() }></input>
-													
 													<button id="btnSubmit" type="submit" class="btn btn-outline-success addToCartButton" onclick="return alertFunction();" > Add To
 														Cart</button>
-														
-														
-													</form>
-												<!-- </li> -->
-										<!-- </ul> -->
-											
+												</form>
 										</div>
-										
 									</div>
 								</div>
 							</div>
-
-
-
-
-
-
-
-
+							
 						</c:forEach>
 					</div>
 				</div>

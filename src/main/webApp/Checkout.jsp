@@ -65,6 +65,7 @@
 	
 	<div class="bag">
 		<h5 class="bag-head"><span style="color:black">Your Cart</span></h5>
+		<hr>
 	</div>
 	<c:forEach items="${cp}" var="cp">
 	<div class="bag-product" >
@@ -105,6 +106,7 @@
 			</div>
 		</div>
 	</div>
+	<hr>
 	</c:forEach>
 	<div class="bag-total">
 		
@@ -132,13 +134,11 @@
             </form>
 		</div>
 	</div>
-	<div class="help">
-		<p><span style="color:black">Need help? Call free 01234 567 890</span></p>
-	</div>
 </div>
 </div>
-<div class="bg"></div>
-
+<div class="help">
+	<p><span style="color:black">Need help? Call free 01234 567 890</span></p>
+</div>
 
 </body>
 
