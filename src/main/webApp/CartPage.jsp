@@ -77,11 +77,27 @@
 							  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
 						</form>
 					</li>
-				</ul>
-				<form action="/getDetails" method="GET">
+					<li class="nav-item active">
+					<form action="/getDetails" method="GET">
 					<button type="submit" class="btn nav-item-link" name="username" id="username"
 						value=${user.username }> Details</button>
 				</form>
+				</li>
+				
+				<li class="nav-item active">
+						<form action="/">
+							 
+							  <button  type="submit"  class="btn nav-item-link">Sign out </button> 
+						</form>
+					</li >
+						
+						
+						
+				
+				
+				
+				</ul>
+				
 
 			</div>
 			</div>

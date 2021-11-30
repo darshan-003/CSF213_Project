@@ -74,6 +74,18 @@
 							</form>
 						</li>
 						
+						<li class="nav-item active">
+						<form action="/">
+							 
+							  <button  type="submit"  class="btn nav-item-link">Sign out </button> 
+						</form>
+					</li >
+						
+						
+						
+						
+						
+						
 					</ul>	   
 				</div>
 			</nav>
