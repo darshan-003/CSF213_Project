@@ -58,12 +58,12 @@
 					</li>
 					
 					<li class="nav-item active">
-						<form action="/Checkout">
-						   <input type="hidden" name="username" value=${user.username }></input>
-						   <input type="hidden" name="password" value=${user.getPassword() }></input> 
-							<button id="btnSubmit" type="submit" class="btn nav-item-link"  > Checkout</button>
-						  </form>
-			   </li>	
+						<form action="/cart">
+							 <input type ="hidden" name="username" value=${user.username }></input>
+							<input type ="hidden" name="password" value=${user.getPassword() }></input>
+							  <button  type="submit"  class="btn nav-item-link"> Cart</button> 
+						</form>
+					</li>
 					<li class="nav-item active">
 						<form action="/Orders">
 						   <input type="hidden" name="username" value=${user.username }></input>
@@ -139,8 +139,15 @@
                </div>
                <hr>
         </c:forEach>
-        
-                        
+		<div class="checkoutButtonDiv">
+
+			<form action="/Checkout">
+				<input type="hidden" name="username" value=${user.username }></input>
+				<input type="hidden" name="password" value=${user.getPassword() }></input> 
+				<button id="btnSubmit" type="submit" class="checkoutButton"> Checkout</button>
+			</form>
+		</div>
+			
 </div>
 </div>	
 

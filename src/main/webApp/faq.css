@@ -1,5 +1,12 @@
 @charset "ISO-8859-1";
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
+}
+
 .text-secondary {
     color: #3d5d6f;
   }
@@ -48,4 +55,16 @@
   #accordion a[aria-expanded=true] .fa-plus {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  .faqTitle{
+    background: darkgrey;
+  }
+
+  .main-bg{
+    background: whitesmoke;
+  }
+
+  .card{
+    background: beige;
   }

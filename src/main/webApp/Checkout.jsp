@@ -38,27 +38,36 @@
                           <button  type="submit"  class="btn nav-item-link"> Cart</button> 
 					</form>
 				</li>
-					<li class="nav-item active">
-					<button href=""  class="btn nav-item-link" > Orders Placed </a>
-				   </li>
+				<li class="nav-item active">
+					<form action="/Orders">
+					   <input type="hidden" name="username" value=${user.username }></input>
+					   <input type="hidden" name="password" value=${user.getPassword() }></input> 
+						<button id="btnSubmit" type="submit" class="btn nav-item-link"  > Your Orders</button>
+					  </form>
+				</li>
 				     <li class="nav-item active">	
 					   <form action="/Faq">
 							
 							  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
 						</form>
 					</li>
-				   </ul>	   
-					   <form action="/getDetails" method="GET">
-  <button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username }> Details</button> 
-  </form>
+					<li class="nav-item active">
+
+						<form action="/getDetails" method="GET">
+							<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username }> Details</button> 
+						</form>
+					</li>
+					<li class="nav-item active">
+						<form action="/">
+							  <button  type="submit"  class="btn nav-item-link">Sign out </button> 
+						</form>
+					</li >
+				</ul>	   
 				
 			</div>
 		</div>
 	</nav>
 	
-			</div>
-		</div>
-	</nav>
 <div class="center-wrapper">
 	<div class="content">
 	
@@ -97,7 +106,7 @@
 					     <input type ="hidden" name="id" value=${cp.id }></input>
                         <input type ="hidden" name="password" value=${user.getPassword() }></input>
               
-                          <button type="submit" class="btn-remove"><span style="color:black">Remove</span></button>
+                          <button type="submit" class="btn-remove removeButton"><span style="color:white">Remove</span></button>
                           
                        
 					</form>
@@ -121,11 +130,6 @@
 			<h3><span style="color:black">Rs ${TotalPrice.getTotalPrice() }</span></h3>
 		</div>
 		<div class = "thank confirm">
-		
-		<!-- <a href="thankyou.html" class = "confirm">
-		 
-		<span style="color:black">Confirm Order</span></a>
-		</div>	 -->
 		<div class = "thank">
 			<form action="/placeOrder">
 				<input type ="hidden" name="username" value=${user.username }></input>	    
