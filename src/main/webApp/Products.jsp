@@ -55,11 +55,13 @@
 							
 				   
 				   <li class="nav-item active">
-					   <form action="/Orders">
-							
-							  <button  type="submit"  class="btn nav-item-link"> Orders </button> 
+						<form action="/Orders">
+							 <input type ="hidden" name="username" value=${user.username }></input>
+							<input type ="hidden" name="password" value=${user.getPassword() }></input>
+							  <button  type="submit"  class="btn nav-item-link">Your Orders </button> 
 						</form>
-					</li>
+					</li >
+							
 					   <li class="nav-item active">	
 					   <form action="/Faq">
 							
