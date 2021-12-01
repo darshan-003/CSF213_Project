@@ -92,8 +92,8 @@ pageEncoding="ISO-8859-1"%>
               </div>
             </a>
             <div class="collapse" id="faq-17">
-              <div class="card card-body border-0 p-0">
-                <p>${faq.description }</p>
+              <div class="card card-body border-0 p-0" style="background: beige;">
+                <p style="background-color: beige;">${faq.description }</p>
               </div>
             </div>
           </section>
