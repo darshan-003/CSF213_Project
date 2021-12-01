@@ -17,7 +17,7 @@ pageEncoding="ISO-8859-1"%>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-  <body class="main-bg">
+  <body class="main-bg-signin">
     <div class="login-container text-c animated flipInX">
       <h1 class="text-whitesmoke">Welcome to Malakar Market!</h1>
       <img

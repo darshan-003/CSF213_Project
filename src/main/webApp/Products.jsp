@@ -70,7 +70,7 @@
 					</li>
 						<li class="nav-item active">
 				<form action="/getDetails" method="GET">
-								<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username }> Details</button> 
+								<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username} > Details</button> 
 							</form>
 						</li>
 						
@@ -129,7 +129,6 @@
 				</div>
 
 			</div>
-				</form>
 				<script>
 					function alertFunction() {
 					  alert("Added to Cart");

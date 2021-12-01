@@ -26,7 +26,7 @@ pageEncoding="ISO-8859-1"%>
     </style>
   </head>
 
-  <body class="main-bg">
+  <body class="main-bg-signin">
     <div class="login-container text-c animated flipInX">
       <div>
         <h1 class="logo-badge text-whitesmoke">

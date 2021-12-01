@@ -190,6 +190,10 @@ body {
   background: whitesmoke;
 }
 
+.main-bg-signin {
+  background: #424242;
+}
+
 /* Login & Register Pages*/
 
 .login-container {
