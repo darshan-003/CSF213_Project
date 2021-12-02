@@ -5,7 +5,7 @@ pageEncoding="ISO-8859-1"%>
   <head>
     <meta charset="ISO-8859-1" />
     <meta name="viewport" content="width=device-width, initialscale=1.0" />
-    <title>Document</title>
+    <title>BitsEcom</title>
     <link rel="stylesheet" href="./signin.css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"
@@ -19,7 +19,7 @@ pageEncoding="ISO-8859-1"%>
   </head>
   <body class="main-bg-signin">
     <div class="login-container text-c animated flipInX">
-      <h1 class="text-whitesmoke">Welcome to Malakar Market!</h1>
+      <h1 class="text-whitesmoke">Welcome to BitsEcom!</h1>
       <img
         id="logoimg"
         src="https://www.bits-pilani.ac.in/Uploads/University/GJCcompetitions/Winners/Nirant_2012C6PS694P_PIL.png"

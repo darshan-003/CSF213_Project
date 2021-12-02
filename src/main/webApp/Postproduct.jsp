@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
-    <title>Add Product</title>
+    <title>BitsEcom</title>
 
     <link rel="stylesheet" href="main.css" />
     <!-- Latest compiled and minified CSS -->

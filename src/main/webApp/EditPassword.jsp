@@ -5,7 +5,7 @@ pageEncoding="ISO-8859-1"%>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initialscale=1.0" />
-    <title>Edit Password</title>
+    <title>BitsEcom</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
