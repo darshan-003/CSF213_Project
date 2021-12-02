@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
-    <title>Add Product</title>
+    <title>BitsEcom</title>
 
     <link rel="stylesheet" href="main.css" />
     <!-- Latest compiled and minified CSS -->
@@ -18,7 +18,7 @@ pageEncoding="ISO-8859-1"%>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
-  <body class="main-bg">
+  <body class="main-product-bg">
     <div class="login-container text-c animated flipInX">
       <div>
         <h1 class="logo-badge text-whitesmoke">

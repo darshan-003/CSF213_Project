@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
-    <title>Sign - in as Admin</title>
+    <title>BitsEcom</title>
 
     <link rel="stylesheet" href="signin.css" />
     <!-- Latest compiled and minified CSS -->

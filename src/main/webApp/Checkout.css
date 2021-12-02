@@ -40,10 +40,6 @@ body {
   font-size: 1.2rem !important;
   background-color: #424242 !important;
 }
-.nav-link:hover {
-  font-weight: bold;
-  background-color: #424242;
-}
 
 @media (max-width: 991px) {
   #logoimg {

@@ -150,6 +150,10 @@ body {
   background: linear-gradient(#f5f5f5, #212121);
 }
 
+.main-product-bg {
+  background: #424242 !important;
+}
+
 /* Login & Register Pages*/
 
 .login-container {

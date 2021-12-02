@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
-    <title>FAQ</title>
+    <title>BitsEcom</title>
     <link rel="stylesheet" href="signin.css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"
@@ -16,7 +16,7 @@ pageEncoding="ISO-8859-1"%>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-  <body class="main-bg">
+  <body class="main-bg-signin">
     <div class="login-container text-c animated flipInX">
       <div>
         <h1 class="logo-badge text-whitesmoke">

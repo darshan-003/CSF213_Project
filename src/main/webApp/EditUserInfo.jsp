@@ -4,7 +4,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
   <head>
     <meta charset="ISO-8859-1" />
-    <title>User Info</title>
+    <title>BitsEcom</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
