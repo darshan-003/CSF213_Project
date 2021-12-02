@@ -38,65 +38,60 @@
 
 		</button>
 
-		<div class="collapse navbar-collapse  " id="Item">
-			<ul id="cni" class="navbar-nav ml-auto">
-
+		<div class="collapse navbar-collapse  " id="Item" >
+			<ul id="cni" class="navbar-nav ml-auto" >
 				<li class="nav-item active">
 					<form action="/getUser">
-						<input type="hidden" name="username" value=${user.username }></input>
-						<input type="hidden" name="password" value=${user.getPassword() }></input>
-
-						<button type="submit"  class="btn btn-outline-dark"> Home</button>
-
-
+						<input type ="hidden" name="username" value=${user.username }></input>
+					   <input type ="hidden" name="password" value=${user.getPassword() }></input>
+						 <button  type="submit"  class="btn nav-item-link"> Home</button> 
+				   </form>
+			</li>
+			
+				<li class="nav-item active">
+				<form action="/cart">
+					 <input type ="hidden" name="username" value=${user.username }></input>
+					<input type ="hidden" name="password" value=${user.getPassword() }></input>
+					  <button  type="submit"  class="btn nav-item-link"> Cart</button> 
+				</form>
+			</li >
+					
+		   
+		   <li class="nav-item active">
+				<form action="/Orders">
+					 <input type ="hidden" name="username" value=${user.username }></input>
+					<input type ="hidden" name="password" value=${user.getPassword() }></input>
+					  <button  type="submit"  class="btn nav-item-link">Your Orders </button> 
+				</form>
+			</li >
+					
+			   <li class="nav-item active">	
+			   <form action="/Faq">
+					
+					  <button  type="submit"  class="btn nav-item-link"> Faq </button> 
+				</form>
+			</li>
+				<li class="nav-item active">
+		<form action="/getDetails" method="GET">
+						<button type="submit" class="btn nav-item-link" name="username" id="username" value=${user.username} > Details</button> 
 					</form>
-
 				</li>
-
-
-				<li class="nav-item active">
-
-					<form action="/cart">
-						<input type="hidden" name="username" value=${user.username }></input>
-						<input type="hidden" name="password" value=${user.getPassword() }></input>
-
-						<button type="submit" class="btn btn-outline-dark"> Cart</button>
-
-
-					</form>
-				</li>
-
-				<li class="nav-item active">
-					<a href=""   class="btn btn-outline-dark"> Orders Placed </a>
-				</li>
-
-
-				<li class="nav-item active">
 				
-					<a href="/Faq"  class="btn btn-outline-dark"> FAQ </a></button>
-				</li>
-
-			</ul>
-
-
-
-
-
-
-
-			<form action="/getDetails" method="GET">
-				<button type="submit"  class="btn btn-outline-dark" name="username" id="username"
-					value=${user.username }> Details</button>
-			</form>
-
+				<li class="nav-item active">
+				<form action="/">
+					 
+					  <button  type="submit"  class="btn nav-item-link">Sign out </button> 
+				</form>
+			</li >
+				
+			</ul>	   
 		</div>
 	</nav>
 
-
 		
 		
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" >
-			<div class="card" >
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+			<div class="cardDetail" >
 				<img class="card-img-top" src=${product.imageUrl} height="300px" >
 
 				<div class="card-body" >
@@ -109,18 +104,20 @@
 					<br>
 					
 
-				
+					<div class="addDiv">
+
 						<form class="margin-t" action="/addToCart" id="addToCartForm">
 							<input type="hidden" name="username" value=${user.username }></input>
 							<input type="hidden" name="id" value=${product.id }></input>
 							
 							<input type="hidden" name="password" value=${user.getPassword() }></input>
 							
-							<button id="btnSubmit" type="submit" class="btn btn-outline-succes"> Add To
+							<button id="btnSubmit" type="submit" class="btn btn-outline-succes addButton"> Add To
 								Cart</button>
-
-
-						</form>
+								
+								
+							</form>
+						</div>
 
 				</div>
 			</div>
