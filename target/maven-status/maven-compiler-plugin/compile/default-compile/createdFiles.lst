@@ -5,7 +5,6 @@ com\example\demo\Admin.class
 com\example\demo\controller\FaqController.class
 com\example\demo\controller\ProductController.class
 com\example\demo\User.class
-com\example\demo\UserSignupLoginDarshanApplication.class
 com\example\demo\dao\UserRepo.class
 com\example\demo\Faq.class
 com\example\demo\dao\CartRepo.class
