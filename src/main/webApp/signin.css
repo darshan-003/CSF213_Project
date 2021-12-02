@@ -183,7 +183,14 @@ body {
 .nav-item {
   font-size: 1.4em;
   color: #000000;
-  padding-right: 20px;
+}
+.nav-item-link {
+  color: white !important;
+  max-width: 120px;
+  margin-right: 20px;
+  padding: 0px !important;
+  font-size: 1.2rem !important;
+  background-color: #424242 !important;
 }
 
 .main-bg {
@@ -191,7 +198,7 @@ body {
 }
 
 .main-bg-signin {
-  background: #424242;
+  background: #424242 !important; 
 }
 
 /* Login & Register Pages*/

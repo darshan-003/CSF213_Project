@@ -18,7 +18,7 @@ pageEncoding="ISO-8859-1"%>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
-  <body class="main-bg">
+  <body class="main-product-bg">
     <div class="login-container text-c animated flipInX">
       <div>
         <h1 class="logo-badge text-whitesmoke">
