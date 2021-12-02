@@ -51,6 +51,9 @@ pageEncoding="ISO-8859-1"%>
           <li class="nav-item active">
             <a href="/AddFaq.jsp" class="nav-link" style="color: white;">Add FAQ </a>
           </li>
+          <li class="nav-item active">
+            <a href="/ProductStatus" class="nav-link" style="color: white;">Product Status </a>
+          </li>
         </ul>
       </div>
     </nav>
