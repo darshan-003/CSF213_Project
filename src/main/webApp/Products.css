@@ -23,7 +23,22 @@ body {
   height: 800px;
   margin-bottom: 15px;
 }
+.cardDetail {
+  width: 600px;
+  height: 600px;
+  /* margin-bottom: 15px; */
+  background: white;
+  margin: auto;
+}
 
+.addButton{
+  border-radius: 5px;
+  background: darkgray;
+}
+
+.addDiv{
+  text-align-last: center;
+}
 .card-deck{
   margin-bottom: 15px !important;
 }

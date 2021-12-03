@@ -76,7 +76,7 @@ pageEncoding="ISO-8859-1"%>
               role="button"
             >
               <div class="position-relative">
-                <h2 class="h4 m-0 pr-3">${faq.title }</h2>
+                <h2 class="h4 m-0 pr-3" style="color: black;">${faq.title }</h2>
                 <div
                   class="
                     position-absolute
